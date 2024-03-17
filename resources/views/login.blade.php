@@ -18,6 +18,11 @@
 <body>
     <div class="container">
         <h1 class="mb-4">로그인</h1>
+        @if(session('message'))
+        <div class="alert alert-danger">
+            {{ session('message') }}
+        </div>
+        @endif
         <form method="POST" action="{{ route('login') }}">
             @csrf
 
